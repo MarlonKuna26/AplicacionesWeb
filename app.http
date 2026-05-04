@@ -1,0 +1,35 @@
+###Obtener todas las películas
+GET http://localhost:3000/movies
+
+###Obtener una película
+GET http://localhost:3000/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+
+###Obtener todas las películas por género
+GET http://localhost:3000/movies?genre=Biography
+
+###Crear una película
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    "title": "Prueba",
+    "year": 2020,
+    "director": "Test1 Director1",
+    "duration": 100,
+    "poster": "https://i.pinimg.com/originals/7e/37/b9/7e37b994b613e94cba64f307b1983e39.jpg",
+    "genre": ["Crime", "Sci-Fi"]
+}
+
+###Actualizar una película
+PATCH http://localhost:3000/movies/6a360a18-c645-4b47-9a7b-2a71babbf3e0
+Content-Type: application/json
+
+{
+    "SQL":"select * from users",
+    "title": "Prueba",
+    "year": 2010
+}
+
+###Eliminar una película
+DELETE http://localhost:3000/movies/6a360a18-c645-4b47-9a7b-2a71babbf3e0
+

@@ -5,7 +5,9 @@
     "main": "index.js",
     "scripts": {
         "test": "node --watch app.js",
-        "dev": "nodemon app.js"
+        "dev": "nodemon server-db-local.js",
+        "dev:mongo": "nodemon server-db-mongo.js",
+        "start:mongo": "node server-db-mongo.js"
     },
     "keywords": [],
     "author": "",
